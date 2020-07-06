@@ -4,7 +4,7 @@ data:
     - groups:
       - system:bootstrappers
       - system:nodes
-      rolearn: arn:aws:iam::022633227919:role/eksctl-simple-jwt-api-nodegroup-n-NodeInstanceRole-RQ5Z5YLWMJCG
+      rolearn: arn:aws:iam::022633227919:role/jwt-stck-myjwt-CodeBuildServiceRole-1UPBODHHVVUGO
       username: system:node:{{EC2PrivateDNSName}}
       rolearn: arn:aws:iam::022633227919:role/UdacityFlaskDeployCBKubectlRole99
        username: build
