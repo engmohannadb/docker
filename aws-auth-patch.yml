@@ -12,7 +12,7 @@ data:
          - system:masters
   mapUsers: |
    - userarn: arn:aws:iam::022633227919:user/monadadmin
-       username: testuser
+       username: monadadmin
        groups:
            - system:masters
 kind: ConfigMap
