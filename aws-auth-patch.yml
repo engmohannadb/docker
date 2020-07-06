@@ -11,7 +11,10 @@ data:
        groups:
          - system:masters
   mapUsers: |
-    []
+   - userarn: arn:aws:iam::022633227919:user/monadadmin
+       username: testuser
+       groups:
+           - system:masters
 kind: ConfigMap
 metadata:
   creationTimestamp: "2020-07-04T23:34:12Z"
