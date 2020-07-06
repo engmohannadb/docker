@@ -1,0 +1,28 @@
+$  echo $TOKEN
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTUxNzE3NDcsIm5iZiI6MTU5Mzk2MjE0NywiZW1haWwiOiJlbmdtb2hhbm5hZGJAZ21haWwuY29tIn0.zUE7SNDDfHaixUIhldh6QXnIPsSct1ijbB7tlaP4eZ0
+
+
+
+{
+  "email": "engmohannadb@gmail.com",
+  "exp": 1595171747,
+  "nbf": 1593962147
+}
+
+
+
+ip-192-168-62-89.us-west-2.compute.internal    Ready    <none>   68s   v1.16.8-eks-fd1ea7
+ip-192-168-93-238.us-west-2.compute.internal   Ready    <none>   64s   v1.16.8-eks-fd1ea7
+
+
+aws account no: 022633227919
+{
+    "UserId": "AIDAQKRILU2HSDV7S6I76",
+    "Account": "022633227919",
+    "Arn": "arn:aws:iam::022633227919:user/monadadmin"
+}
+
+
+github: docker99 : b2e353cbc95de0668e0bcaa7b0180cd926401481
+
+arn:aws:iam::022633227919:role/UdacityFlaskDeployCBKubectlRole99

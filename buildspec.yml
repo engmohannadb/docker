@@ -1,8 +1,5 @@
 ---
 version: 0.2
-env:
- parameter-store:         
-   JWT_SECRET: JWT_SECRET
 
 phases:
   install:
@@ -24,7 +21,10 @@ phases:
       - apt-get update && apt-get -y install jq  && pip install --upgrade awscli
   pre_build:
       commands:
-        - pip install -r requirements.txt 
+        - pip install pyjwt
+        - pip install flask
+        - pip install gunicorn
+        - pip install pytest
         - python -m pytest test_main.py
         - TAG="$REPOSITORY_NAME.$REPOSITORY_BRANCH.$ENVIRONMENT_NAME.$(date +%Y-%m-%d.%H.%M.%S).$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | head -c 8)"
         - sed -i 's@CONTAINER_IMAGE@'"$REPOSITORY_URI:$TAG"'@' simple_jwt_api.yml
@@ -39,6 +39,9 @@ phases:
       - docker push $REPOSITORY_URI:$TAG
       - aws eks update-kubeconfig --name $EKS_CLUSTER_NAME --role-arn $EKS_KUBECTL_ROLE_ARN
       - kubectl apply -f simple_jwt_api.yml 
-      - printf '[{"name":"simple_jwt_api","imageUri":"%s"}]' $REPOSITORY_URI:$TAG > build.json
+      - printf '[{"name":"simple_jwt_api2","imageUri":"%s"}]' $REPOSITORY_URI:$TAG > build.json
 artifacts:
   files: build.json
+env:
+ parameter-store:         
+   JWT_SECRET: JWT_SECRET  
