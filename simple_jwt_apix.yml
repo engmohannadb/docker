@@ -1,0 +1,40 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: simple-jwt-apix
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 80
+      targetPort: 8080
+  selector:
+    app: simple-jwt-apix
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-jwt-apix
+spec:
+  replicas: 3
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 2
+      maxSurge: 2
+  selector:
+    matchLabels:
+      app: simple-jwt-apix
+  template:
+    metadata:
+      labels:
+        app: simple-jwt-apix
+    spec:
+      containers:
+        - name: simple-jwt-apix
+          image: CONTAINER_IMAGE
+          securityContext:
+            privileged: false
+            readOnlyRootFilesystem: false
+            allowPrivilegeEscalation: false
+          ports:
+            - containerPort: 8080
