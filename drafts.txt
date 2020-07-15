@@ -23,6 +23,6 @@ aws account no: 022633227919
 }
 
 
-github: docker99 : b2e353cbc95de0668e0bcaa7b0180cd926401481
+github: dockerx : 542d3b70dc05baa75de9d536862b9fde77ac4a6b 
 
 arn:aws:iam::022633227919:role/UdacityFlaskDeployCBKubectlRole99
