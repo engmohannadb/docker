@@ -11,8 +11,8 @@ eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTUxNzE3NDcsIm5iZiI6MTU5Mzk2MjE
 
 
 
-ip-192-168-62-89.us-west-2.compute.internal    Ready    <none>   68s   v1.16.8-eks-fd1ea7
-ip-192-168-93-238.us-west-2.compute.internal   Ready    <none>   64s   v1.16.8-eks-fd1ea7
+ip-192-168-62-89.us-east-2.compute.internal    Ready    <none>   68s   v1.16.8-eks-fd1ea7
+ip-192-168-93-238.us-east-2.compute.internal   Ready    <none>   64s   v1.16.8-eks-fd1ea7
 
 
 aws account no: 022633227919
@@ -25,4 +25,4 @@ aws account no: 022633227919
 
 github: dockerx : 542d3b70dc05baa75de9d536862b9fde77ac4a6b 
 
-arn:aws:iam::022633227919:role/UdacityFlaskDeployCBKubectlRole99
+arn:aws:iam::022633227919:role/UdacityFlaskDeployCBKubectlRole
